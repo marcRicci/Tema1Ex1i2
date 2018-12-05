@@ -91,8 +91,8 @@ public class GetDatos extends HttpServlet {
             pw.println("{\"error\":\"Ha sido imposible recuperar los datos\"}");
            
         }
-        
-}
+      
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.

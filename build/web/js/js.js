@@ -221,7 +221,7 @@ function funcionalidadGeneral(){//Permite arrancar los métodos para que muchas 
 	salirPagina();
 }
 function dificultades(){//Permite elegir las dificultades y cambia de color la elegida.
-	var facil=document.getElementById("Facil");
+	/*var facil=document.getElementById("Facil");
 	var normal=document.getElementById("Normal");
 	var dificil=document.getElementById("Dificil");
 	facil.style.backgroundColor="#120229";
@@ -242,7 +242,7 @@ function dificultades(){//Permite elegir las dificultades y cambia de color la e
 		facil.style.backgroundColor="#120229";
 		normal.style.backgroundColor="#020140";
 		dificil.style.backgroundColor="#020140";
-	}
+	}*/
 }
 
 function apretarAlien(){/*Permite apretar el alien para acelerar
@@ -310,13 +310,12 @@ $(document).ready(function () {
     });
 
     $("#Facil").click(function () {
-        dififcultad=5;
         var url="GetDatos"; //doPost->SaveFile
         $.ajax({
             method: "POST",
             url: url,
             dataType:"json",
-            data: {dificultad:dificultad},
+            data: {dificultad:5},
             success: function (rsp) {
                 alert(rsp["mess"]);
             },
@@ -330,13 +329,12 @@ $(document).ready(function () {
     });
 
     $("#Normal").click(function () {
-        dificultad=3;
         var url="GetDatos"; //doPost->SaveFile
         $.ajax({
             method: "POST",
             url: url,
             dataType:"json",
-            data: {dificultad:dificultad},
+            data: {dificultad:3},
             success: function (rsp) {
                 alert(rsp["mess"]);
             },
@@ -350,13 +348,12 @@ $(document).ready(function () {
     });
 
     $("#Dificil").click(function () {
-        dificultad=1;
         var url="GetDatos"; //doPost->SaveFile
         $.ajax({
             method: "POST",
             url: url,
             dataType:"json",
-            data: {dificultad:dificultad},
+            data: {dificultad:1},
             success: function (rsp) {
                 alert(rsp["mess"]);
             },
